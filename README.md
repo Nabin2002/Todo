@@ -30,31 +30,37 @@ A simple, elegant, and responsive Todo List application built with **HTML**, **C
 
 ## 📂 Folder Structure
 
-📦 Todo-App/
+``` 
+Todo/
+├── assets/
+│ ├── screenshot1.png
+│ └── screenshot2.png
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
-
+```
 ---
 
 ## 🚀 Getting Started
 
-You can clone this repository and run it locally:
+To run the project locally:
 
 ```bash
 git clone https://github.com/Nabin2002/Todo.git
 cd Todo
 open index.html
 
----
+```
 
 ## 📸 Screenshots
 
-![UI Preview](assets\Screenshot 2025-07-13 095350.png)
-![UI Preview](assets\Screenshot 2025-07-13 095408.png)
+### 🖼️ Task Added View
+![Task Added](assets/1.png)
+
+### ✅ Completed Task View
+![Task Completed](assets/2.png)
 
 ---
-
 ## 🙋‍♂️ Author
-Nabin Chandra Roy
+#### Nabin Chandra Roy
