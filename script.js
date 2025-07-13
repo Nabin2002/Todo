@@ -50,23 +50,28 @@ btn.addEventListener('click', (e) => {
     addTodo(e);
 });
 
+inpt.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        btn.click();
+    }
+});
 
+
+//Show when the list is empty
 const updateEmptyMessage = () => {
     if (localTodo.length === 0) {
         list.innerHTML = `<p style="text-align:center;color:gray;">No tasks yet</p>`;
     }
 };
 
-
-
-
 //Initially fill the list with the element
 const showTodoList = () => {
-  if (localTodo.length === 0) {
-    updateEmptyMessage();
-  } else {
-    localTodo.forEach((curEle) => addTodoDynamicElement(curEle));
-  }
+    if (localTodo.length === 0) {
+        updateEmptyMessage();
+    } else {
+        localTodo.forEach((curEle) => addTodoDynamicElement(curEle));
+    }
 };
 
 showTodoList();
@@ -84,6 +89,8 @@ const removeTodoElement = (e) => {
     addTodoListLocalStorage(localTodo);
     console.log(localTodo);
     parentEle.remove();
+    updateEmptyMessage();
+
 }
 
 //Accessing the list for deletion of the element
